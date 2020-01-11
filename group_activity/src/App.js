@@ -103,13 +103,13 @@ export default function App() {
   return (
     <div className='App'>
       <div className='App-Content'>
-        <h1 className='App-Title'>Registration Form</h1>
+        <h1 className='App-Title'>Movies</h1>
 
         <FormField>
           <FormFieldLabel>
-            <FormFieldLabelText>First Name</FormFieldLabelText>
+            <FormFieldLabelText>Enter your favorite movie</FormFieldLabelText>
             <TextInputField
-              placeholder='Enter your first name'
+              placeholder='Enter your favorite'
               value={firstNameState.value}
               onChange={firstNameState.onChange}
               errorMessageLabel='First name required'
@@ -119,9 +119,9 @@ export default function App() {
 
         <FormField>
           <FormFieldLabel>
-            <FormFieldLabelText>Last Name</FormFieldLabelText>
+            <FormFieldLabelText>what is your favorite actor</FormFieldLabelText>
             <TextInputField
-              placeholder='Enter your last name'
+              placeholder='Enter actor name'
               value={lastNameState.value}
               onChange={lastNameState.onChange}
               errorMessageLabel='Last name required'
@@ -138,55 +138,55 @@ export default function App() {
                 checked={isAbove19}
                 onChange={onChangeAbove19}
               />
-              Above 19?
+              Are you 18+?
             </FormFieldLabelText>
           </FormFieldLabel>
         </FormField>
 
         <FormField>
-          <div className='FormField-Heading'>Diet Restriction</div>
+          <div className='FormField-Heading'>Genre</div>
 
           <FormFieldLabel type='radio'>
             <FormFieldLabelText type='radio'>
               <RadioInputField
-                value='vegetarian'
-                checked={diet === 'vegetarian'}
+                value='drama'
+                checked={diet === 'drama'}
                 onChange={onChangeDiet}
               />
-              Vegetarian
+              Drama
             </FormFieldLabelText>
           </FormFieldLabel>
 
           <FormFieldLabel type='radio'>
             <FormFieldLabelText type='radio'>
               <RadioInputField
-                value='vegan'
-                checked={diet === 'vegan'}
+                value='comedy'
+                checked={diet === 'comedy'}
                 onChange={onChangeDiet}
               />
-              Vegan
+              Comedy
             </FormFieldLabelText>
           </FormFieldLabel>
 
           <FormFieldLabel type='radio'>
             <FormFieldLabelText type='radio'>
               <RadioInputField
-                value='halal-kosher'
-                checked={diet === 'halal-kosher'}
+                value='action'
+                checked={diet === 'action'}
                 onChange={onChangeDiet}
               />
-              Halal/Kosher
+              Action
             </FormFieldLabelText>
           </FormFieldLabel>
 
           <FormFieldLabel type='radio'>
             <FormFieldLabelText type='radio'>
               <RadioInputField
-                value='none'
-                checked={diet === 'none'}
+                value='Terror'
+                checked={diet === 'Terror'}
                 onChange={onChangeDiet}
               />
-              None
+              Terror
             </FormFieldLabelText>
           </FormFieldLabel>
         </FormField>
@@ -206,7 +206,7 @@ export default function App() {
               !isOnline
             }
           >
-            Register
+            Submit
           </button>
         </div>
       </div>
